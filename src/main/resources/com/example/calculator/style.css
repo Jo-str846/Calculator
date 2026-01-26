@@ -1,0 +1,90 @@
+.root {
+    -fx-background-color: #1e272e;
+}
+
+#mainDisplay {
+    -fx-background-color: #2f3640;
+    -fx-text-fill: #00d8d6;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-alignment: center-right;
+    -fx-padding: 0 10 0 0;
+}
+
+#historyDisplay {
+    -fx-background-color: #2f3640;
+    -fx-text-fill: #808e9b;
+    -fx-font-size: 14px;
+    -fx-alignment: center-right;
+}
+
+.label {
+    -fx-text-fill: #d2dae2;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+}
+
+.button {
+    -fx-background-radius: 4;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+}
+
+.button:pressed {
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.7), 5, 0.0, 0, 2);
+    -fx-translate-y: 2; /* Moves the button down 2 pixels to simulate a press */
+}
+
+.number-btn {
+    -fx-background-color: #485460;
+        -fx-background-insets: 0;
+        -fx-background-color: linear-gradient(#485460, #2f3640);
+            -fx-border-color: #1e272e;
+            -fx-border-width: 1;
+            -fx-border-radius: 5;
+}
+
+.number-btn:hover {
+    -fx-background-color: #596275;
+}
+
+.op-btn {
+    -fx-background-color: #3c40c6;
+        -fx-background-insets: 0;
+        -fx-background-color: linear-gradient(#575fcf, #3c40c6);
+            -fx-border-color: #273c75;
+            -fx-border-width: 1;
+            -fx-border-radius: 5;
+}
+
+.op-btn:hover {
+    -fx-background-color: #575fcf;
+}
+
+.equal-btn {
+    -fx-background-color: #05c46b;
+     -fx-background-insets: 0;
+     -fx-background-color: linear-gradient(#0be881, #05c46b);
+         -fx-border-color: #218c74;
+         -fx-border-width: 1;
+         -fx-border-radius: 5;
+}
+
+.equal-btn:hover {
+    -fx-background-color: #0be881;
+}
+
+.clear-btn {
+    -fx-background-color: #ff3f34;
+     -fx-background-insets: 0;
+     -fx-background-color: linear-gradient(#ff5e57, #ff3f34);
+         -fx-border-color: #b33939;
+         -fx-border-width: 1;
+         -fx-border-radius: 5;
+}
+
+.clear-btn:hover {
+    -fx-background-color: #ff5e57;
+}
