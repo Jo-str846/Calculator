@@ -53,39 +53,42 @@
        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
      </rowConstraints>
       <children>
-         <Label text="HEX">
-            <font>
-               <Font name="Arial Bold" size="16.0" />
-            </font></Label>
-         <Label text="DEC" GridPane.rowIndex="1">
-            <font>
-               <Font name="Arial Bold" size="16.0" />
-            </font>
-         </Label>
-         <Label text="OCT" GridPane.rowIndex="2">
-            <font>
-               <Font name="Arial Bold" size="16.0" />
-            </font></Label>
-         <Label text="BIN" GridPane.rowIndex="3">
-            <font>
-               <Font name="Arial Bold" size="16.0" />
-            </font></Label>
          <Label fx:id="decDisplay" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <font>
-               <Font name="Arial Bold" size="12.0" />
+               <Font name="Arial Bold" size="16.0" />
             </font></Label>
          <Label fx:id="hexDisplay" text="0" GridPane.columnIndex="1">
             <font>
-               <Font name="Arial Bold" size="12.0" />
+               <Font name="Arial Bold" size="16.0" />
             </font></Label>
          <Label fx:id="binDisplay" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
             <font>
-               <Font name="Arial Bold" size="12.0" />
+               <Font name="Arial Bold" size="16.0" />
             </font></Label>
          <Label fx:id="octDisplay" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <font>
-               <Font name="Arial Bold" size="12.0" />
+               <Font name="Arial Bold" size="16.0" />
             </font></Label>
+         <Button fx:id="btnHexMode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="HEX">
+            <font>
+               <Font name="Bodoni MT Black" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="btnDecMode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="DEC" GridPane.rowIndex="1">
+            <font>
+               <Font name="Bodoni MT Black" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="btnOctMode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="OCT" GridPane.rowIndex="2">
+            <font>
+               <Font name="Bodoni MT Black" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="btnBinMode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="BIN" GridPane.rowIndex="3">
+            <font>
+               <Font name="Bodoni MT Black" size="12.0" />
+            </font>
+         </Button>
       </children>
    </GridPane>
    <GridPane hgap="3.0" prefHeight="263.0" prefWidth="462.0" vgap="3.0">

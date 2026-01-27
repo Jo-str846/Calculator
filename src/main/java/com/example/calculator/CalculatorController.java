@@ -10,11 +10,27 @@ public class CalculatorController {
     @FXML private Label mainDisplay, historyDisplay;
     @FXML private Label hexDisplay, decDisplay, octDisplay, binDisplay;
     @FXML Button btn;
+    @FXML List <Button> hexButtons;
 
     private String currentInput = "";
     private long firstNumber = 0;
     private String operator = "";
     private boolean startNewInput = true;
+
+    public enum NumberBase {
+        BINARY(2), OCTAL(8), DECIMAL(10), HEXADECIMAL(16);
+        public final int value;
+        NumberBase(int value){this.value = value;}
+    }
+    private NumberBase currentMode = NumberBase.DECIMAL;
+
+    private void updateKeyPad() {
+        boolean isHex = (currentMode == NumberBase.HEXADECIMAL);
+        for(Button btn : hexButtons) {
+            btn.setDisable(!isHex);
+            btn.setOpacity(isHex ? 1.0:0.4);
+        }
+    }
 
     @FXML
     public void onNumberClicked(ActionEvent event) {
@@ -48,17 +64,15 @@ public class CalculatorController {
     @FXML
     private void onDeleteClicked(ActionEvent event) {
         if (currentInput != null && currentInput.length() > 0) {
-            // Remove the last character
             currentInput = currentInput.substring(0, currentInput.length() - 1);
 
-            // If we deleted everything, show 0
             if (currentInput.isEmpty()) {
                 currentInput = "0";
                 startNewInput = true;
             }
 
             mainDisplay.setText(currentInput);
-            updateBases(); // Keep all base displays in sync
+            updateBases();
         }
     }
 
@@ -86,7 +100,7 @@ public class CalculatorController {
             }
             startNewInput = true;
         } catch (Exception e) {
-            mainDisplay.setText("Error"); // Simple exception handling
+            mainDisplay.setText("Error");
         }
     }
 
@@ -101,13 +115,11 @@ public class CalculatorController {
 
     @FXML
     private void onClearClicked(ActionEvent event) {
-        // Reset all internal state
         currentInput = "";
         firstNumber = 0;
         operator = "";
         startNewInput = true;
 
-        // Reset all UI labels
         mainDisplay.setText("0");
         historyDisplay.setText("");
         hexDisplay.setText("0");

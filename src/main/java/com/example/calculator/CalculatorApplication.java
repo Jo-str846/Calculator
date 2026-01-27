@@ -15,7 +15,7 @@ public class CalculatorApplication extends Application {
 
         scene.getStylesheets().add(getClass().getResource("/com/example/calculator/style.css").toExternalForm());
 
-        stage.setTitle("Calculator");
+        stage.setTitle("Programmer Calculator");
         stage.setScene(scene);
         stage.show();
     }
