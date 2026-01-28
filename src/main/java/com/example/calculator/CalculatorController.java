@@ -1,12 +1,10 @@
 package com.example.calculator;
 
-import com.example.calculator.CalculatorOperator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import java.util.List;
-import java.util.ArrayList;
 
 public class CalculatorController {
     @FXML private Label mainDisplay, historyDisplay;
@@ -55,11 +53,11 @@ public class CalculatorController {
         btnF.setDisable(!isHex);
         btnF.setOpacity(isHex ? 1.0 : 0.3);
 
-        boolean disable89 = (isOct || isBin);
-        btn8.setDisable(disable89);
-        btn8.setOpacity(isOct ? 0.3 : 1.0);
-        btn9.setDisable(disable89);
-        btn9.setOpacity(isOct ? 0.3 : 1.0);
+        boolean lock89 = (isOct || isBin);
+        btn8.setDisable(lock89);
+        btn8.setOpacity(lock89 ? 0.3 : 1.0);
+        btn9.setDisable(lock89);
+        btn9.setOpacity(lock89 ? 0.3 : 1.0);
 
         btn2.setDisable(isBin);
         btn2.setOpacity(isBin ? 0.3 : 1.0);
