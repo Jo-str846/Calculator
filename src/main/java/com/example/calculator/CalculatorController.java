@@ -55,27 +55,24 @@ public class CalculatorController {
         btnF.setDisable(!isHex);
         btnF.setOpacity(isHex ? 1.0 : 0.3);
 
-        btn8.setDisable(!isOct);
-        btn8.setOpacity(isOct ? 1.0 : 0.3);
-        btn9.setDisable(!isOct);
-        btn9.setOpacity(isOct ? 1.0 : 0.3);
+        boolean disable89 = (isOct || isBin);
+        btn8.setDisable(disable89);
+        btn8.setOpacity(isOct ? 0.3 : 1.0);
+        btn9.setDisable(disable89);
+        btn9.setOpacity(isOct ? 0.3 : 1.0);
 
-        btn2.setDisable(!isBin);
+        btn2.setDisable(isBin);
         btn2.setOpacity(isBin ? 0.3 : 1.0);
-        btn3.setDisable(!isBin);
+        btn3.setDisable(isBin);
         btn3.setOpacity(isBin ? 0.3 : 1.0);
-        btn4.setDisable(!isBin);
+        btn4.setDisable(isBin);
         btn4.setOpacity(isBin ? 0.3 : 1.0);
-        btn5.setDisable(!isBin);
+        btn5.setDisable(isBin);
         btn5.setOpacity(isBin ? 0.3 : 1.0);
-        btn6.setDisable(!isBin);
+        btn6.setDisable(isBin);
         btn6.setOpacity(isBin ? 0.3 : 1.0);
-        btn7.setDisable(!isBin);
+        btn7.setDisable(isBin);
         btn7.setOpacity(isBin ? 0.3 : 1.0);
-        btn8.setDisable(!isBin);
-        btn8.setOpacity(isBin ? 0.3 : 1.0);
-        btn9.setDisable(!isBin);
-        btn9.setOpacity(isBin ? 0.3 : 1.0);
     }
 
     @FXML
