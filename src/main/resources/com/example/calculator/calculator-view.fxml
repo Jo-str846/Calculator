@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="609.0" prefWidth="501.0" spacing="20.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.CalculatorController">
+<VBox alignment="CENTER" prefHeight="631.0" prefWidth="456.0" spacing="20.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.CalculatorController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <VBox alignment="CENTER_RIGHT" prefHeight="196.0" prefWidth="462.0">
+   <VBox alignment="CENTER_RIGHT" prefHeight="116.0" prefWidth="416.0">
       <children>
          <HBox prefHeight="36.0" prefWidth="306.0">
             <children>
@@ -39,9 +39,7 @@
          </Label>
       </children>
    </VBox>
-
-    <Label fx:id="welcomeText" />
-   <GridPane hgap="3.0" prefHeight="131.0" prefWidth="462.0" vgap="3.0">
+   <GridPane hgap="3.0" prefHeight="126.0" prefWidth="416.0" vgap="3.0">
      <columnConstraints>
        <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.4000244140625" minWidth="10.0" prefWidth="83.99998779296875" />
        <ColumnConstraints hgrow="SOMETIMES" maxWidth="399.40001678466797" minWidth="10.0" prefWidth="375.20001220703125" />
@@ -69,29 +67,31 @@
             <font>
                <Font name="Arial Bold" size="16.0" />
             </font></Label>
-         <Button fx:id="btnHexMode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="HEX">
+         <Button fx:id="btnHexMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleHexMode" styleClass="mode-btn" text="HEX" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
             <font>
-               <Font name="Bodoni MT Black" size="12.0" />
+               <Font name="Bodoni MT Black" size="10.0" />
             </font>
          </Button>
-         <Button fx:id="btnDecMode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="DEC" GridPane.rowIndex="1">
+         <Button fx:id="btnDecMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleDecMode" styleClass="mode-btn" text="DEC" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
             <font>
-               <Font name="Bodoni MT Black" size="12.0" />
+               <Font name="Bodoni MT Black" size="10.0" />
             </font>
          </Button>
-         <Button fx:id="btnOctMode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="OCT" GridPane.rowIndex="2">
+         <Button fx:id="btnOctMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleOctMode" styleClass="mode-btn" text="OCT" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
             <font>
-               <Font name="Bodoni MT Black" size="12.0" />
+               <Font name="Bodoni MT Black" size="10.0" />
             </font>
          </Button>
-         <Button fx:id="btnBinMode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="BIN" GridPane.rowIndex="3">
+         <Button fx:id="btnBinMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleBinMode" styleClass="mode-btn" text="BIN" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
             <font>
-               <Font name="Bodoni MT Black" size="12.0" />
+               <Font name="Bodoni MT Black" size="10.0" />
             </font>
          </Button>
       </children>
    </GridPane>
-   <GridPane hgap="3.0" prefHeight="263.0" prefWidth="462.0" vgap="3.0">
+
+    <Label fx:id="welcomeText" />
+   <GridPane hgap="3.0" prefHeight="274.0" prefWidth="416.0" vgap="3.0">
      <columnConstraints>
          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
@@ -164,15 +164,15 @@
             <font>
                <Font name="Arial Nova Bold Italic" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="7" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <Button fx:id="btn7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="7" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="8" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <Button fx:id="btn8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="8" GridPane.columnIndex="2" GridPane.rowIndex="2">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="9" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <Button fx:id="btn9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="9" GridPane.columnIndex="3" GridPane.rowIndex="2">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>
@@ -180,15 +180,15 @@
             <font>
                <Font name="Arial Nova Bold Italic" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="4" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <Button fx:id="btn4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="4" GridPane.columnIndex="1" GridPane.rowIndex="3">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="5" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <Button fx:id="btn5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="5" GridPane.columnIndex="2" GridPane.rowIndex="3">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="6" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <Button fx:id="btn6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="6" GridPane.columnIndex="3" GridPane.rowIndex="3">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>
@@ -196,15 +196,15 @@
             <font>
                <Font name="Arial Nova Bold Italic" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="1" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <Button fx:id="btn1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="1" GridPane.columnIndex="1" GridPane.rowIndex="4">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="2" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <Button fx:id="btn2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="2" GridPane.columnIndex="2" GridPane.rowIndex="4">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="3" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <Button fx:id="btn3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="3" GridPane.columnIndex="3" GridPane.rowIndex="4">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>
@@ -216,7 +216,7 @@
             <font>
                <Font name="Arial Nova Bold Italic" size="12.0" />
             </font></Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <Button fx:id="btn0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberClicked" styleClass="number-btn" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5">
             <font>
                <Font name="System Bold" size="12.0" />
             </font></Button>

@@ -37,6 +37,18 @@
     -fx-translate-y: 2; /* Moves the button down 2 pixels to simulate a press */
 }
 
+.mode-btn {
+    -fx-background-color: linear-gradient(#4a4e54, #2e3135);
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
+}
+
+.mode-btn:pressed, .mode-btn:selected {
+    -fx-background-color: #00d2ff; /* Cyan glow when active */
+    -fx-text-fill: black;
+}
 .number-btn {
     -fx-background-color: #485460;
         -fx-background-insets: 0;

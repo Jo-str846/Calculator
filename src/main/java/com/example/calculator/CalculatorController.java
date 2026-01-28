@@ -5,12 +5,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import java.util.List;
+import java.util.ArrayList;
 
 public class CalculatorController {
     @FXML private Label mainDisplay, historyDisplay;
     @FXML private Label hexDisplay, decDisplay, octDisplay, binDisplay;
     @FXML Button btn;
-    @FXML List <Button> hexButtons;
+    @FXML Button btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
+    @FXML Button btnA, btnB, btnC, btnD, btnE, btnF;
+    @FXML Button btnHexMode, btnDecMode, btnOctMode, btnBinMode;
+    List<Button> hexButtons;
 
     private String currentInput = "";
     private long firstNumber = 0;
@@ -30,6 +35,71 @@ public class CalculatorController {
             btn.setDisable(!isHex);
             btn.setOpacity(isHex ? 1.0:0.4);
         }
+    }
+
+    private void applyMode() {
+        boolean isHex = (currentMode == NumberBase.HEXADECIMAL);
+        boolean isOct = (currentMode == NumberBase.OCTAL);
+        boolean isBin = (currentMode == NumberBase.BINARY);
+
+        btnA.setDisable(!isHex);
+        btnA.setOpacity(isHex ? 1.0 : 0.3);
+        btnB.setDisable(!isHex);
+        btnB.setOpacity(isHex ? 1.0 : 0.3);
+        btnC.setDisable(!isHex);
+        btnC.setOpacity(isHex ? 1.0 : 0.3);
+        btnD.setDisable(!isHex);
+        btnD.setOpacity(isHex ? 1.0 : 0.3);
+        btnE.setDisable(!isHex);
+        btnE.setOpacity(isHex ? 1.0 : 0.3);
+        btnF.setDisable(!isHex);
+        btnF.setOpacity(isHex ? 1.0 : 0.3);
+
+        btn8.setDisable(!isOct);
+        btn8.setOpacity(isOct ? 1.0 : 0.3);
+        btn9.setDisable(!isOct);
+        btn9.setOpacity(isOct ? 1.0 : 0.3);
+
+        btn2.setDisable(!isBin);
+        btn2.setOpacity(isBin ? 0.3 : 1.0);
+        btn3.setDisable(!isBin);
+        btn3.setOpacity(isBin ? 0.3 : 1.0);
+        btn4.setDisable(!isBin);
+        btn4.setOpacity(isBin ? 0.3 : 1.0);
+        btn5.setDisable(!isBin);
+        btn5.setOpacity(isBin ? 0.3 : 1.0);
+        btn6.setDisable(!isBin);
+        btn6.setOpacity(isBin ? 0.3 : 1.0);
+        btn7.setDisable(!isBin);
+        btn7.setOpacity(isBin ? 0.3 : 1.0);
+        btn8.setDisable(!isBin);
+        btn8.setOpacity(isBin ? 0.3 : 1.0);
+        btn9.setDisable(!isBin);
+        btn9.setOpacity(isBin ? 0.3 : 1.0);
+    }
+
+    @FXML
+    private void handleHexMode() {
+        currentMode = NumberBase.HEXADECIMAL;
+        applyMode();
+    }
+
+    @FXML
+    private void handleDecMode() {
+        currentMode = NumberBase.DECIMAL;
+        applyMode();
+    }
+
+    @FXML
+    private void handleOctMode() {
+        currentMode = NumberBase.OCTAL;
+        applyMode();
+    }
+
+    @FXML
+    private void handleBinMode() {
+        currentMode = NumberBase.BINARY;
+        applyMode();
     }
 
     @FXML
@@ -126,5 +196,19 @@ public class CalculatorController {
         decDisplay.setText("0");
         octDisplay.setText("0");
         binDisplay.setText("0");
+    }
+
+    @FXML
+    private void handleModeChange(ActionEvent event) {
+        Button clickedbutton = (Button) event.getSource();
+        String modeText = clickedbutton.getText();
+
+        switch (modeText) {
+            case "HEX": currentMode = NumberBase.HEXADECIMAL; break;
+            case "DEC": currentMode = NumberBase.DECIMAL; break;
+            case "OCT": currentMode = NumberBase.OCTAL; break;
+            case "BIN": currentMode = NumberBase.BINARY; break;
+        }
+        updateKeyPad();
     }
     }
