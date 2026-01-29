@@ -67,22 +67,22 @@
             <font>
                <Font name="Arial Bold" size="16.0" />
             </font></Label>
-         <Button fx:id="btnHexMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleHexMode" styleClass="mode-btn" text="HEX" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+         <Button fx:id="btnHexMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleHexMode" styleClass="mode-btn" text="HEX" wrapText="true" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
             <font>
                <Font name="Bodoni MT Black" size="10.0" />
             </font>
          </Button>
-         <Button fx:id="btnDecMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleDecMode" styleClass="mode-btn" text="DEC" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+         <Button fx:id="btnDecMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleDecMode" styleClass="mode-btn" text="DEC" wrapText="true" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
             <font>
                <Font name="Bodoni MT Black" size="10.0" />
             </font>
          </Button>
-         <Button fx:id="btnOctMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleOctMode" styleClass="mode-btn" text="OCT" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+         <Button fx:id="btnOctMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleOctMode" styleClass="mode-btn" text="OCT" wrapText="true" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
             <font>
                <Font name="Bodoni MT Black" size="10.0" />
             </font>
          </Button>
-         <Button fx:id="btnBinMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleBinMode" styleClass="mode-btn" text="BIN" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+         <Button fx:id="btnBinMode" maxHeight="80.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleBinMode" styleClass="mode-btn" text="BIN" wrapText="true" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
             <font>
                <Font name="Bodoni MT Black" size="10.0" />
             </font>

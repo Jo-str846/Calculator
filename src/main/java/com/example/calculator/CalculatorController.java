@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import java.lang.Math;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -77,24 +78,47 @@ public class CalculatorController {
     private void handleHexMode() {
         currentMode = NumberBase.HEXADECIMAL;
         applyMode();
+        updatemainDisplay();
     }
 
     @FXML
     private void handleDecMode() {
         currentMode = NumberBase.DECIMAL;
         applyMode();
+        updatemainDisplay();
     }
 
     @FXML
     private void handleOctMode() {
         currentMode = NumberBase.OCTAL;
         applyMode();
+        updatemainDisplay();
+
     }
 
     @FXML
     private void handleBinMode() {
         currentMode = NumberBase.BINARY;
         applyMode();
+        updatemainDisplay();
+    }
+
+    private void updatemainDisplay() {
+        try{
+            int value = Math.toIntExact(Long.parseLong(currentInput, 10));
+
+            String formattedResult;
+            switch (currentMode){
+                case BINARY -> formattedResult = Integer.toBinaryString(value);
+                case OCTAL -> formattedResult = Integer.toOctalString(value);
+                case HEXADECIMAL -> formattedResult = Integer.toHexString(value).toUpperCase();
+                default -> formattedResult = String.valueOf(value);
+            }
+
+            mainDisplay.setText(formattedResult);
+        } catch (NumberFormatException | ArithmeticException e) {
+            mainDisplay.setText("Error");
+        }
     }
 
     @FXML
